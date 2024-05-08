@@ -1,48 +1,38 @@
-# Nuxt Example
+# Covid Visualiser
 
-Deploy your [Nuxt](https://nuxt.com) project to Vercel with zero configuration.
+An interactive web app for visualising worldwide trends in Covid-19 data.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/nuxtjs&template=nuxtjs)
+---
 
-_Live Example: https://nuxtjs-template.vercel.app_
-
-Look at the [Nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+## 1. Installation
 
 ```bash
-# yarn
-yarn
-
-# npm
-npm install
-
-# pnpm
 pnpm install --shamefully-hoist
 ```
 
-## Development Server
+---
 
-Start the development server on http://localhost:3000
+## 2. Usage
 
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
+Starting the development server on [localhost](http://localhost:3000) can be done with:
 
 ```bash
-npm run build
+pnpm run dev
 ```
 
-Locally preview production build:
+Running a production build instead can be done with:
 
 ```bash
-npm run preview
+pnpm run build
+pnpm run preview
 ```
 
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment#presets) for more information.
+---
+
+## 3. Dataset
+
+---
+
+## 4. Authorship
+
+All work completed by Zoe Picone, Nathan Bridge-Earney, and Samuel Mata in submission for SWEN422.
