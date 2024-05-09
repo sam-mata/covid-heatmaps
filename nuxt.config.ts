@@ -7,5 +7,5 @@ export default defineNuxtConfig({
     '/': { prerender: true },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/ui"]
+  modules: ["@nuxt/ui"]
 });

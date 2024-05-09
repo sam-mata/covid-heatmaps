@@ -1,5 +1,7 @@
+<script setup>
+import * as Plot from "@observablehq/plot";
+</script>
+
 <template>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <h1 class="text-xl text-blue-500">Test Text</h1>
 </template>
