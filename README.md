@@ -1,48 +1,71 @@
-# Nuxt Example
+# Covid Visualiser
 
-Deploy your [Nuxt](https://nuxt.com) project to Vercel with zero configuration.
+An interactive web app for visualising worldwide trends in Covid-19 data.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/nuxtjs&template=nuxtjs)
+This project can be viewed live [here](https://covid-visualiser.vercel.app/).
 
-_Live Example: https://nuxtjs-template.vercel.app_
+---
 
-Look at the [Nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+## 1. Installation
 
 ```bash
-# yarn
-yarn
-
-# npm
-npm install
-
-# pnpm
 pnpm install --shamefully-hoist
 ```
 
-## Development Server
+> [!NOTE]
+> _The `--shamefully-hoist` flag **is** required, despite the name, as this flattens the node modules for production._
 
-Start the development server on http://localhost:3000
+---
 
-```bash
-npm run dev
-```
+## 2. Usage
 
-## Production
-
-Build the application for production:
+Starting the development server on [localhost](http://localhost:3000) can be done with:
 
 ```bash
-npm run build
+pnpm run dev
 ```
 
-Locally preview production build:
+> [!NOTE]
+> _Nuxt will first have to initialise, which can take some time before the project structure is loaded and hot-reloading is available._
+
+Running a production build instead can be done with:
 
 ```bash
-npm run preview
+pnpm run build
+pnpm run preview
 ```
 
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment#presets) for more information.
+---
+
+## 3. Dataset
+
+| Metrics                     | Source                                                    | Accessed/Updated\*                                                          | Countries |
+| --------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------- | --------- |
+| Vaccinations                | Official data collated by the Our World in Data team      | Daily                                                                       | 218       |
+| Tests & positivity          | Official data collated by the Our World in Data team      | [No longer updated](https://github.com/owid/covid-19-data/discussions/2667) | 193       |
+| Hospital & ICU              | Official data collated by the Our World in Data team      | Daily                                                                       | 46        |
+| Confirmed cases             | WHO COVID-19 Data                                         | Daily                                                                       | 219       |
+| Confirmed deaths            | WHO COVID-19 Data                                         | Daily                                                                       | 219       |
+| Reproduction rate           | Arroyo-Marioli F, Bullano F, Kucinskas S, Rondón-Moreno C | Daily                                                                       | 196       |
+| Policy responses            | Oxford COVID-19 Government Response Tracker               | Daily                                                                       | 185       |
+| Other variables of interest | International organizations (UN, World Bank, OECD, IHME…) | Fixed                                                                       | 242       |
+
+---
+
+## 4. Tools
+
+| **TOOL**          | **USAGE**          | **DOCS**                                                   |
+| ----------------- | ------------------ | ---------------------------------------------------------- |
+| `Vercel`          | Hosting            | [docs](https://vercel.com/docs)                            |
+| `Nuxt`            | Framework          | [docs](https://nuxt.com/docs/getting-started/introduction) |
+| `Vue`             | JS Framework       | [docs](https://vuejs.org/guide/introduction.html)          |
+| `TailwindCSS`     | Styling            | [docs](https://tailwindcss.com/docs/utility-first)         |
+| `Nuxt UI`         | UI Components      | [docs](https://ui.nuxt.com/getting-started)                |
+| `D3`              | Data Visualisation | [docs](https://d3js.org/)                                  |
+| `Observable Plot` | Data Visualisation | [docs](https://observablehq.com/plot/)                     |
+
+---
+
+## 5. Authorship
+
+All work completed by Zoe Picone, Nathan Bridge-Earney, and Sam Mata in submission for SWEN422.
