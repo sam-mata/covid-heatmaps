@@ -10,6 +10,7 @@ const range = ref({
   start: new Date(2020, 0, 6),
   end: new Date(2020, 0, 10),
 });
+import WorldMap from "~/components/WorldMap.ts";
 </script>
 
 <template>
@@ -53,5 +54,4 @@ const range = ref({
       </template>
     </UCard>
   </UContainer>
-
 </template>
