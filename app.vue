@@ -2,6 +2,7 @@
 import * as Plot from "@observablehq/plot";
 import PlotFigure from "./PlotFigure.js";
 import penguins from "./data/penguins.json";
+import WorldMap from "~/components/WorldMap.ts";
 </script>
 
 <template>
