@@ -2,7 +2,6 @@
 import * as Plot from "@observablehq/plot";
 import PlotFigure from "./PlotFigure.js";
 import penguins from "./data/penguins.json";
-import WorldMap from "~/components/WorldMap.ts";
 import "./app.css";
 
 const features = ['Deaths', 'Vaccinations', 'Cases'], feature = ref(features[0]);
