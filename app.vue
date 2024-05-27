@@ -10,7 +10,6 @@ const range = ref({
   start: new Date(2020, 0, 6),
   end: new Date(2020, 0, 10),
 });
-import WorldMap from "~/components/WorldMap.ts";
 </script>
 
 <template>
@@ -35,11 +34,7 @@ import WorldMap from "~/components/WorldMap.ts";
           <div>
             <h2 class="font-extrabold text-3xl py-2">Map</h2>
             <div class=" mx-auto w-fit p-4">
-              <PlotFigure :options="{
-                marks: [
-                  Plot.dot(penguins, { x: 'culmen_length_mm', y: 'culmen_depth_mm' }),
-                ],
-              }" />
+              <WorldMap />
             </div>
           </div>
         </div>
