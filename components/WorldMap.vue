@@ -6,10 +6,7 @@ import world from "../data/countries-110m.json"
 import * as topojson from "topojson-client"
 
 let countries = topojson.feature(world, world.objects.countries)
-</script>
-
-<template>
-  <PlotFigure :options="{
+let options_hash = {
     height: 500,
     projection: 'equal-earth',
     marks: [
@@ -17,7 +14,11 @@ let countries = topojson.feature(world, world.objects.countries)
             fill: (d) => d.properties.name === 'United States of America'
         })
     ]
-  }" />
+  }
+</script>
+
+<template>
+  <PlotFigure :options="options_hash" />
 </template>
 
 <style scoped>
