@@ -5,7 +5,6 @@ import penguins from "./data/penguins.json";
 import WorldMap from "~/components/WorldMap.ts";
 import "./app.css";
 
-
 const features = ['Deaths', 'Vaccinations', 'Cases'], feature = ref(features[0]);
 const range = ref({ start: new Date(2020, 0, 1), end: new Date(2023, 11, 31), });
 </script>
@@ -54,11 +53,7 @@ const range = ref({ start: new Date(2020, 0, 1), end: new Date(2023, 11, 31), })
             <h2 class="font-bold text-3xl py-2 text-center font-baloo">Map</h2>
             <!-- Plot-->
             <div class=" mx-auto w-fit p-4">
-              <PlotFigure :options="{
-                marks: [
-                  Plot.dot(penguins, { x: 'culmen_length_mm', y: 'culmen_depth_mm' }),
-                ],
-              }" />
+              <WorldMap />
             </div>
           </div>
 
