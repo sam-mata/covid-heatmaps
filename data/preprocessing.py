@@ -41,7 +41,7 @@ fields_to_remove = {"new_cases_smoothed", "new_deaths_smoothed", "new_cases_smoo
                   "new_people_vaccinated_smoothed", "new_people_vaccinated_smoothed_per_hundred", "population_density",
                   "median_age", "aged_65_older", "aged_70_older", "gdp_per_capita", "extreme_poverty",
                   "cardiovasc_death_rate", "diabetes_prevalence", "female_smokers", "male_smokers",
-                  "handwashing_facilities", "hospital_beds_per_thousand", "life_expectancy", "human_development_index"}
+                  "handwashing_facilities", "hospital_beds_per_thousand", "life_expectancy", "human_development_index","continent"}
 
 countries_to_remove = {"OWID_AFR","OWID_ASI","OWID_ENG","OWID_EUR","OWID_EUN","OWID_HIC","OWID_KOS","OWID_LIC","OWID_LMC","OWID_NAM","OWID_CYN","OWID_NIR","OWID_OCE","OWID_SCT","OWID_SAM","OWID_UMC","OWID_WLS"}
 #%%
