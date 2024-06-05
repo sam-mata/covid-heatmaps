@@ -11,8 +11,7 @@ const isOpen = ref(false)
 
     <!-- Map (BACK) -->
     <div class="fixed top-0 left-0 w-full h-full">
-      <!-- <WorldMap /> -->
-      <LeafletMap />
+      <WorldMap />
     </div>
 
     <!-- Overlay (FRONT) -->
