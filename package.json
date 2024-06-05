@@ -15,12 +15,14 @@
 		"@samk-dev/nuxt-vcalendar": "^1.0.3",
 		"@types/topojson-client": "^3.1.4",
 		"nuxt": "^3.11.2",
+		"sass": "^1.77.4",
 		"vue": "^3.4.27",
 		"vue-router": "^4.3.2"
 	},
 	"dependencies": {
 		"@nuxt/typescript": "^2.8.1",
 		"@observablehq/plot": "^0.6.14",
+		"@vueform/slider": "^2.1.10",
 		"date-fns": "^3.6.0",
 		"topojson-client": "^3.1.0",
 		"v-calendar": "^3.1.2"
