@@ -4,8 +4,7 @@ import PlotFigure from "./PlotFigure.js";
 import penguins from "./data/penguins.json";
 import "./app.css";
 
-const features = ['Deaths', 'Vaccinations', 'Cases'], feature = ref(features[0]);
-const range = ref({ start: new Date(2020, 0, 1), end: new Date(2023, 11, 31), });
+const features = ['Cases', 'Deaths', 'Vaccinations'], feature = ref(features[0]);
 </script>
 
 <template>
@@ -20,7 +19,7 @@ const range = ref({ start: new Date(2020, 0, 1), end: new Date(2023, 11, 31), })
       </template>
 
       <!-- Body -->
-      <UCardBody>
+      <div id="app" class="p-4">
         <div class="flex">
 
           <!-- Map Settings -->
@@ -42,7 +41,7 @@ const range = ref({ start: new Date(2020, 0, 1), end: new Date(2023, 11, 31), })
               <UIcon name="i-heroicons-calendar-days-16-solid" class="pr-6" />
               <h3 class="py-2 font-semibold font-open-sans">Date Range : </h3>
             </div>
-            <VDatePicker v-model.range="range" mode="date" is-dark="system" color="yellow" />
+            <Timescale />
           </div>
 
           <UDivider orientation="vertical" class="px-4" />
@@ -57,7 +56,7 @@ const range = ref({ start: new Date(2020, 0, 1), end: new Date(2023, 11, 31), })
           </div>
 
         </div>
-      </UCardBody>
+      </div>
 
       <!-- Footer -->
       <template #footer>
