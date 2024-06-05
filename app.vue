@@ -1,75 +1,43 @@
-<script setup>
-import * as Plot from "@observablehq/plot";
-import PlotFigure from "./PlotFigure.js";
-import penguins from "./data/penguins.json";
+<script setup lang="ts">
 import "./app.css";
 
-const features = ['Cases', 'Deaths', 'Vaccinations'], feature = ref(features[0]);
+const features = [{ label: 'Deaths', }, { label: 'Cases', }, { label: 'Vaccinations', }]
+const isOpen = ref(false)
+
 </script>
 
 <template>
-  <UContainer>
-    <UCard class="h-screen">
+  <div class="relative h-screen">
 
-      <!-- Header -->
-      <template #header>
-        <h1 class="text-7xl font-bold text-center py-6 font-open-sans">
-          Covid-19 Visualiser
-        </h1>
-      </template>
+    <!-- Map (BACK) -->
+    <div class="fixed top-0 left-0 w-full h-full">
+      <WorldMap />
+    </div>
 
-      <!-- Body -->
-      <div id="app" class="p-4">
-        <div class="flex">
+    <!-- Overlay (FRONT) -->
+    <div class="absolute inset-0 flex flex-col items-center justify-between">
 
-          <!-- Map Settings -->
-          <div class="w-1/4">
-            <h2 class="font-bold text-3xl py-4 text-center font-baloo">Settings</h2>
+      <!-- Top Div -->
+      <div class="flex items-center justify-center w-full mt-20">
 
-            <!-- Feature Selection -->
-            <div class="flex items-center">
-              <UIcon name="i-heroicons-check-circle-solid" class="pr-6" />
-              <h3 class="py-2 font-semibold pr-4 font-open-sans">Feature : </h3>
-              <USelect v-model="feature" :options="features" />
-            </div>
+        <!-- Feature Selector-->
+        <UTabs :items="features" :default-index="1" />
 
-            <!-- Divider -->
-            <UDivider class="py-4" />
-
-            <!-- Date Range Selection -->
-            <div class="flex items-center">
-              <UIcon name="i-heroicons-calendar-days-16-solid" class="pr-6" />
-              <h3 class="py-2 font-semibold font-open-sans">Date Range : </h3>
-            </div>
-            <Timescale />
-          </div>
-
-          <UDivider orientation="vertical" class="px-4" />
-
-          <!-- Map -->
-          <div>
-            <h2 class="font-bold text-3xl py-2 text-center font-baloo">Map</h2>
-            <!-- Plot-->
-            <div class=" mx-auto w-fit p-4">
-              <WorldMap />
-            </div>
-          </div>
-
+        <!-- Info Modal-->
+        <div class="absolute top-20 right-[28rem]">
+          <UButton icon="i-heroicons-information-circle" @click="isOpen = true" />
+          <UModal v-model="isOpen">
+            <AuthorsModal />
+          </UModal>
         </div>
       </div>
 
-      <!-- Footer -->
-      <template #footer>
-        <p class="pt-3 font-baloo">
-          All work completed by
-          <a href="https://github.com/zoepicone">Zoe Picone</a>, <a href="https://github.com/nathanbridgeearney">Nathan
-            Bridge-Earney</a> , and <a href="https://github.com/sam-mata">Sam Mata</a>.
-        </p>
-        <p class="pt-1 font-baloo">
-          Project code available <a href="https://github.com/sam-mata/covid-visualiser">here
-          </a>.
-        </p>
-      </template>
-    </UCard>
-  </UContainer>
+      <!-- Bottom Div -->
+      <div class="w-1/2 shadow-sm mb-28">
+        <Timescale />
+      </div>
+
+    </div>
+
+  </div>
 </template>

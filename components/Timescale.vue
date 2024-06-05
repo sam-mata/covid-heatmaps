@@ -25,11 +25,10 @@ export default {
 </script>
 
 <template>
-  <div>
-    <Slider v-model="value" :min="min" :max="max" :step="step" :tooltipPosition="tooltipPosition" :format="format" />
-  </div>
+  <Slider v-model="value" :min="min" :max="max" :step="step" :tooltipPosition="tooltipPosition" :format="format"
+    class="font-open-sans" />
 </template>
 
 <style lang="scss">
-  @import 'node_modules/@vueform/slider/themes/tailwind.scss';
+@import 'node_modules/@vueform/slider/themes/tailwind.scss';
 </style>
