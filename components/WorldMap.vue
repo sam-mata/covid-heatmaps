@@ -4,15 +4,15 @@
 
 <script>
 import mapboxgl from 'mapbox-gl';
-import countries from '../data/countries.js';
-import updated_countries from '../data/updated_geoData.js';
+import data from '../data.js';
 
 export default {
   mounted() {
     mapboxgl.accessToken = 'pk.eyJ1IjoibWF0YXNhbXUiLCJhIjoiY2x4MnRzOGJqMG1kYTJub21tM3YzZWMyeCJ9.gWwXsEB5lyc3KgDHYYhGLg';
     const map = new mapboxgl.Map({
       container: this.$refs.mapContainer,
-      style: 'mapbox://styles/matasamu/clxdxx2b0000s01rn8v4f87gg',
+      // style: 'mapbox://styles/matasamu/clxdxx2b0000s01rn8v4f87gg',
+      style: 'mapbox://styles/mapbox/light-v10',
       center: [0, 0],
       zoom: 2,
       interactive: true,
@@ -21,7 +21,7 @@ export default {
     map.on('load', () => {
       map.addSource('countries', {
         type: 'geojson',
-        data: updated_countries,
+        data: data,
       });
 
       map.addLayer({
