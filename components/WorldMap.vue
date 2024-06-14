@@ -1,27 +1,57 @@
-<script setup lang="ts">
-import * as Plot from "@observablehq/plot";
-import PlotFigure from "../PlotFigure.js";
-import world from "../data/countries-110m.json"
-import * as topojson from "topojson-client"
-
-let countries = topojson.feature(world, world.objects.countries)
-let options_hash = {
-  marginTop: 0,
-  marginBottom: 0,
-  marginLeft: 0,
-  marginRight: 0,
-  width: 1920,
-  projection: {
-    type: 'mercator',
-  },
-  marks: [
-    Plot.geo(countries, {
-      fill: (d) => d.properties.name === 'United States of America'
-    })
-  ]
-}
-</script>
-
 <template>
-  <PlotFigure :options="options_hash" />
+  <div ref="mapContainer" class="w-full h-full"></div>
 </template>
+
+<script>
+import mapboxgl from 'mapbox-gl';
+import countries from '../data/countries.js';
+import updated_countries from '../data/updated_geoData.js';
+
+export default {
+  mounted() {
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWF0YXNhbXUiLCJhIjoiY2x4MnRzOGJqMG1kYTJub21tM3YzZWMyeCJ9.gWwXsEB5lyc3KgDHYYhGLg';
+    const map = new mapboxgl.Map({
+      container: this.$refs.mapContainer,
+      style: 'mapbox://styles/matasamu/clxdxx2b0000s01rn8v4f87gg',
+      center: [0, 0],
+      zoom: 2,
+      interactive: true,
+    });
+
+    map.on('load', () => {
+      map.addSource('countries', {
+        type: 'geojson',
+        data: updated_countries,
+      });
+
+      map.addLayer({
+        id: 'choropleth',
+        type: 'fill',
+        source: 'countries',
+        paint: {
+          'fill-color': [
+            'interpolate',
+            ['linear'],
+            ['get', 'total_cases'],
+            0,
+            '#F2F12D',
+            100,
+            '#EED322',
+            1000,
+            '#E6B71E',
+            10000,
+            '#DA9C20',
+            100000,
+            '#CA8323',
+            1000000,
+            '#B86B25',
+            100000000,
+            '#A25626',
+          ],
+          'fill-opacity': 0.2,
+        },
+      });
+    });
+  },
+};
+</script>

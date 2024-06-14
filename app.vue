@@ -2,7 +2,7 @@
 import "./app.css";
 
 const features = [{ label: 'Deaths', }, { label: 'Cases', }, { label: 'Vaccinations', }]
-const isOpen = ref(false)
+const isOpen = ref(true)
 
 </script>
 
@@ -10,34 +10,32 @@ const isOpen = ref(false)
   <div class="relative h-screen">
 
     <!-- Map (BACK) -->
-    <div class="fixed top-0 left-0 w-full h-full">
-      <WorldMap />
-    </div>
+    <WorldMap />
 
     <!-- Overlay (FRONT) -->
-    <div class="absolute inset-0 flex flex-col items-center justify-between">
+    <!-- <div class="absolute inset-0 flex flex-col items-center justify-between"> -->
 
-      <!-- Top Div -->
-      <div class="flex items-center justify-center w-full mt-20">
+    <!-- Top Div -->
+    <!-- <div class="flex items-center justify-center w-full mt-20"> -->
 
-        <!-- Feature Selector-->
-        <UTabs :items="features" :default-index="1" />
+    <!-- Feature Selector-->
+    <!-- <UTabs :items="features" :default-index="1" /> -->
 
-        <!-- Info Modal-->
-        <div class="absolute top-20 right-[28rem]">
+    <!-- Info Modal-->
+    <!-- <div class="absolute top-20 right-[28rem]">
           <UButton icon="i-heroicons-information-circle" @click="isOpen = true" />
           <UModal v-model="isOpen">
-            <AuthorsModal />
+            <StartModal />
           </UModal>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Bottom Div -->
-      <div class="w-1/2 shadow-sm mb-28">
+    <!-- Bottom Div -->
+    <!-- <div class="w-1/2 shadow-sm mb-28">
         <Timescale />
-      </div>
+      </div> -->
 
-    </div>
+    <!-- </div> -->
 
   </div>
 </template>
