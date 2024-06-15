@@ -7,5 +7,10 @@ export default defineNuxtConfig({
     // prerender index route by default
     '/': { prerender: true },
   },
+   runtimeConfig: {
+    public: {
+      MAPBOX: process.env.MAPBOX
+    }
+  }
 
 });
