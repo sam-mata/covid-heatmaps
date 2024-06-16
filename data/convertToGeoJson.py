@@ -1,4 +1,5 @@
 import json
+from collections import OrderedDict
 
 name_mapping = {
     "Congo": "Republic of Congo",
@@ -22,10 +23,26 @@ data_add = {}
 for code, details in country_data.items():
     if 'data' in details:
         location = name_mapping.get(details['location'], details['location'])
+
+        last_entry = details['data'][-1] if details['data'] else {}
+        last_valid_values = {
+            'total_deaths': None,
+            'total_cases': None,
+            'stringency_index': None,
+            'people_vaccinated': None,
+            'total_tests': None
+        }
+
+        for entry in reversed(details['data']):
+            for key in last_valid_values:
+                if last_valid_values[key] is None and key in entry:
+                    last_valid_values[key] = entry[key]
+
         data_add[code] = {
             'data': details['data'],
             'population': details.get('population'),
-            'location': location
+            'location': location,
+            'last_known_values': last_valid_values
         }
 
 with open('countries.js', 'r') as file:
@@ -39,9 +56,17 @@ for feature in geojson['features']:
     country_name = feature['properties']['ADMIN']
     for code in data_add:
         if data_add[code]['location'] == country_name:
-            feature['properties'].update(data_add[code])
-            if 'location' in feature['properties']:
-                del feature['properties']['location']
+            updated_properties = OrderedDict()
+            updated_properties.update(data_add[code])
+            if 'last_known_values' in updated_properties:
+                del updated_properties['last_known_values']
+            updated_properties.update(data_add[code]['last_known_values'])
+            if 'location' in updated_properties:
+                del updated_properties['location']
+
+            data_property = updated_properties.pop('data')
+            updated_properties['data'] = data_property
+            feature['properties'].update(updated_properties)
             break
 
 updated_geojson = json.dumps(geojson)
@@ -51,5 +76,3 @@ with open('data.js', 'w') as output_file:
     output_file.write(updated_js)
 
 print("Updated data.js")
-
-#%%
