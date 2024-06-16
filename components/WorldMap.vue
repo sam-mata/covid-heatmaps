@@ -37,13 +37,11 @@ export default {
     });
 
     this.map.on('load', () => {
-      this.addSource();
-      this.updateMap();
+      this.fetchData();
     });
 
     this.map.on('style.load', () => {
-      this.addSource();
-      this.updateMap();
+      this.fetchData();
     });
 
     this.map.on('click', (e) => {
@@ -75,7 +73,18 @@ export default {
     },
   },
   methods: {
-    addSource() {
+    fetchData() {
+      fetch('/data.json')
+        .then(response => response.json())
+        .then(data => {
+          this.addSource(data);
+          this.updateMap();
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    },
+    addSource(data) {
       if (!this.map.getSource('countries')) {
         this.map.addSource('countries', {
           type: 'geojson',
@@ -117,7 +126,7 @@ export default {
       let sum = 0;
       let count = 0;
 
-      data.features.forEach(feature => {
+      this.map.getSource('countries')._data.features.forEach(feature => {
         const value = feature.properties[property];
         if (value !== undefined && value !== null) {
           min = Math.min(min, value);

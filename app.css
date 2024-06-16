@@ -12,5 +12,10 @@ a {
 }
 
 p {
-	@apply text-center;
+	@apply pt-1 text-center font-baloo;
+}
+
+/* Pesky Scrollbar */
+::-webkit-scrollbar {
+	width: 0px;
 }
