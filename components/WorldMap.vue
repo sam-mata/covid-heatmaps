@@ -69,6 +69,7 @@ export default {
 
       const property = propertyMap[this.selectedFeature];
 
+      if (this.map.getLayer('choropleth')) {
         this.map.removeLayer('choropleth');
       }
 
