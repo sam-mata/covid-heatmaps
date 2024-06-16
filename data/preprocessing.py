@@ -1,8 +1,5 @@
-# %%
 import json
 
-
-# %%
 def remove_redundant_dates(country_data):
     filtered_data = []
     previous_entry = None
@@ -18,7 +15,6 @@ def remove_redundant_dates(country_data):
     return filtered_data
 
 
-# %%
 def remove_specified_fields(data, fields_to_remove):
     if isinstance(data, dict):
         return {key: remove_specified_fields(value, fields_to_remove) for key, value in data.items() if
@@ -29,12 +25,10 @@ def remove_specified_fields(data, fields_to_remove):
         return data
 
 
-# %%
 def remove_specified_countries(data, countries_to_remove):
     return {key: value for key, value in data.items() if key not in countries_to_remove}
 
 
-# %%
 fields_to_remove = {"new_cases_smoothed", "new_deaths_smoothed", "new_cases_smoothed_per_million",
                     "new_deaths_smoothed_per_million", "new_cases", "new_cases_per_million", "new_deaths",
                     "new_deaths_smoothed", "new_deaths_per_million", "new_deaths_smoothed_per_million",
@@ -59,7 +53,6 @@ fields_to_remove = {"new_cases_smoothed", "new_deaths_smoothed", "new_cases_smoo
 countries_to_remove = {"OWID_AFR", "OWID_ASI", "OWID_ENG", "OWID_EUR", "OWID_EUN", "OWID_HIC", "OWID_KOS", "OWID_LIC",
                        "OWID_LMC", "OWID_NAM", "OWID_CYN", "OWID_NIR", "OWID_OCE", "OWID_SCT", "OWID_SAM", "OWID_UMC",
                        "OWID_WLS"}
-# %%
 with open('data.json', 'r') as input_file:
     json_data = json.load(input_file)
 
