@@ -67,7 +67,44 @@ export default {
         Vaccinations: 'people_vaccinated',
       };
 
+      const colorScales = {
+        Deaths: {
+          min: 'hsl(270, 100%, 90%)',
+          avg: 'hsl(270, 100%, 57%)',
+          max: 'hsl(270, 100%, 25%)',
+        },
+        Cases: {
+          min: 'hsl(100, 100%, 57%)',
+          avg: 'hsl(50, 100%, 57%)',
+          max: 'hsl(0, 100%, 57%)',
+        },
+        Vaccinations: {
+          min: 'hsl(200, 100%, 90%)',
+          avg: 'hsl(200, 100%, 57%)',
+          max: 'hsl(200, 100%, 25%)',
+        },
+      };
+
       const property = propertyMap[this.selectedFeature];
+      const colorScale = colorScales[this.selectedFeature];
+
+      // Calculate min, max, and average values for the selected feature
+      let min = Infinity;
+      let max = -Infinity;
+      let sum = 0;
+      let count = 0;
+
+      data.features.forEach(feature => {
+        const value = feature.properties[property];
+        if (value !== undefined && value !== null) {
+          min = Math.min(min, value);
+          max = Math.max(max, value);
+          sum += value;
+          count++;
+        }
+      });
+
+      const average = count > 0 ? sum / count : 0;
 
       if (this.map.getLayer('choropleth')) {
         this.map.removeLayer('choropleth');
@@ -82,17 +119,9 @@ export default {
             'interpolate',
             ['linear'],
             ['get', property],
-            0, 'hsl(100, 100%, 50%)',
-            1000, 'hsl(90, 100%, 50%)',
-            10000, 'hsl(90, 100%, 50%)',
-            100000, 'hsl(80, 100%, 50%)',
-            500000, 'hsl(70, 100%, 50%)',
-            750000, 'hsl(60, 100%, 50%)',
-            1000000, 'hsl(50, 100%, 50%)',
-            5000000, 'hsl(40, 100%, 50%)',
-            10000000, 'hsl(30, 100%, 50%)',
-            50000000, 'hsl(20, 100%, 50%)',
-            500000000, 'hsl(10, 100%, 50%)'
+            min, colorScale.min,
+            average, colorScale.avg,
+            max, colorScale.max,
           ],
           'fill-opacity': 0.3,
         },
