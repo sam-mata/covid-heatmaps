@@ -7,6 +7,7 @@ import mapboxgl from 'mapbox-gl';
 import data from '../data.js';
 import { h, nextTick, render } from 'vue';
 import CasesLineChart from "~/components/CasesLineChart.vue";
+import '../node_modules/mapbox-gl/dist/mapbox-gl.css';
 
 export default {
   props: {
@@ -50,13 +51,13 @@ export default {
       let country_code = features[0].properties.ISO_A3;
 
       new mapboxgl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML('<div id="line-chart-popup-content"></div>')
-          .addTo(this.map);
+        .setLngLat(e.lngLat)
+        .setHTML('<div id="line-chart-popup-content"></div>')
+        .addTo(this.map);
 
       nextTick(() => {
         const lineChartPopupContent = document.getElementById('line-chart-popup-content');
-        render(h(CasesLineChart, {country_code}), lineChartPopupContent);
+        render(h(CasesLineChart, { country_code }), lineChartPopupContent);
       });
     });
   },
