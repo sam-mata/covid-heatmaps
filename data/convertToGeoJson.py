@@ -14,6 +14,7 @@ name_mapping = {
     "Tanzania": "United Republic of Tanzania",
     "Eswatini": "Swaziland"
 }
+
 with open('cleaned_data.json', 'r') as json_file:
     country_data = json.load(json_file)
 
@@ -39,6 +40,8 @@ for feature in geojson['features']:
     for code in data_add:
         if data_add[code]['location'] == country_name:
             feature['properties'].update(data_add[code])
+            if 'location' in feature['properties']:
+                del feature['properties']['location']
             break
 
 updated_geojson = json.dumps(geojson)
@@ -47,3 +50,6 @@ updated_js = f"export default {updated_geojson};"
 with open('data.js', 'w') as output_file:
     output_file.write(updated_js)
 
+print("Updated data.js")
+
+#%%
