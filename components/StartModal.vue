@@ -1,7 +1,12 @@
 <template>
     <div class="p-4">
         <h1 class="text-3xl font-bold text-center font-open-sans">Kia Ora!</h1>
-        <p class="pt-1 font-baloo">This site was made to visualise several aspects of the Covid-19 pandemic. Please click to begin. 👉</p>
+        <p class="pt-1 font-baloo">This site was made to visualise several aspects of the Covid-19 pandemic. Please
+            click to begin. 👉</p>
+        <p class="pt-1 font-baloo">
+            ⚠️NOTE: All values are absolute, not relative to population
+            figures.
+        </p>
         <p class="pt-3 font-baloo">
             Created by
             <a href="https://github.com/zoepicone">Zoe Picone</a>, <a
