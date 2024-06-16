@@ -30,7 +30,7 @@ onMounted(() => {
       <!-- Top Div -->
       <div class="flex items-center justify-center mx-auto mt-10 space-x-2 pointer-events-auto lg:mt-20">
         <!-- Map Style Toggle -->
-        <div class="mb-2 ml-2 pointer-events-auto">
+        <div class="mb-2 pointer-events-auto">
           <UButton :icon="mapStyle.includes('v10') ? 'i-heroicons-globe-alt' : 'i-heroicons-map'"
             @click="toggleMapStyle" />
         </div>
