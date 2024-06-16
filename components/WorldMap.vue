@@ -4,7 +4,7 @@
 
 <script>
 import mapboxgl from 'mapbox-gl';
-import data from '../data.js';
+import data from '../public/data.js';
 
 export default {
   props: {
