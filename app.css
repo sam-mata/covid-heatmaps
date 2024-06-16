@@ -14,8 +14,3 @@ a {
 p {
 	@apply text-center;
 }
-
-/* ID Styles */
-#line-chart-popup-content {
-	@apply bg-white rounded-lg shadow-lg;
-}

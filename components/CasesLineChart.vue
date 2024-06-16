@@ -12,6 +12,9 @@ let cases = data.useAllTimeCases(props.country_code)
 let date_range = [new Date('2020-01-01'), new Date(data.useLastDate(props.country_code))]
 
 let chart = {
+  // Responsive width
+  width: 400,
+  height: 300,
   x: {
     label: 'Date',
     domain: date_range,
@@ -32,7 +35,8 @@ let chart = {
 </script>
 
 <template>
-  <PlotFigure :options="chart" />
+  <PlotFigure v-if="cases.length > 0" :options="chart" />
+  <p v-else>No cases found for country</p>
 </template>
 
 <style scoped>

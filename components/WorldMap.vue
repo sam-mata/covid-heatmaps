@@ -50,9 +50,14 @@ export default {
       let features = this.map.queryRenderedFeatures(e.point);
       let country_code = features[0].properties.ISO_A3;
 
+      if (!country_code) {
+        return;
+      }
+
       new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML('<div id="line-chart-popup-content"></div>')
+        .setMaxWidth("none")
         .addTo(this.map);
 
       nextTick(() => {
