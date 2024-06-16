@@ -1,11 +1,11 @@
 import data from "../data.js"
 
 export function useCountryData(country_code) {
-    return data.features.filter((d) => d.properties.ISO_A3 === country_code)[0].properties.data
+    return data.features.find((d) => d.properties.ISO_A3 === country_code).properties.data
 }
 
 export function usePopForCountry(country_code) {
-  return data.features.filter((d) => d.properties.ISO_A3 === country_code)[0].properties.population
+  return data.features.find((d) => d.properties.ISO_A3 === country_code).properties.population
 }
 
 export function useAllTimeCases(country_code) {
