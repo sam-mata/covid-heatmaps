@@ -42,6 +42,16 @@ export default {
       this.addSource();
       this.updateMap();
     });
+
+    this.map.on('click', (e) => {
+      let features = this.map.queryRenderedFeatures(e.point);
+      let country_code = features[0].properties.ISO_A3;
+
+      new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(`<CasesLineChart :country_code="country_code" />`)
+        .addTo(this.map);
+    });
   },
   watch: {
     selectedFeature() {

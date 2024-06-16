@@ -1,11 +1,11 @@
-import data from "../data/cleaned_data.json"
+import data from "../data.js"
 
 export function useCountryData(country_code) {
-    return data[country_code].data
+    return data.features.filter((d) => d.properties.ISO_A3 === country_code)[0].properties.data
 }
 
 export function usePopForCountry(country_code) {
-  return data[country_code].population
+  return data.features.filter((d) => d.properties.ISO_A3 === country_code)[0].properties.population
 }
 
 export function useAllTimeCases(country_code) {
