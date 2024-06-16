@@ -29,7 +29,10 @@
 		"@vueform/slider": "^2.1.10",
 		"d3-format": "^3.1.0",
 		"date-fns": "^3.6.0",
+		"mapbox-gl": "^3.4.0",
+		"rollup-plugin-json": "^4.0.0",
 		"topojson-client": "^3.1.0",
-		"v-calendar": "^3.1.2"
+		"v-calendar": "^3.1.2",
+		"vue-mapbox": "^0.4.1"
 	}
 }
