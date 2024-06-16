@@ -48,7 +48,7 @@ fields_to_remove = {"new_cases_smoothed", "new_deaths_smoothed", "new_cases_smoo
                     "cardiovasc_death_rate", "diabetes_prevalence", "female_smokers", "male_smokers",
                     "handwashing_facilities", "hospital_beds_per_thousand", "life_expectancy",
                     "human_development_index", "continent", "total_cases_per_million", "total_deaths_per_million",
-                    "people_vaccinated_per_hundred", "total_tests_per_thousand"}
+                    "people_vaccinated_per_hundred", "total_tests_per_thousand", "stringency_index", "total_tests"}
 
 countries_to_remove = {"OWID_AFR", "OWID_ASI", "OWID_ENG", "OWID_EUR", "OWID_EUN", "OWID_HIC", "OWID_KOS", "OWID_LIC",
                        "OWID_LMC", "OWID_NAM", "OWID_CYN", "OWID_NIR", "OWID_OCE", "OWID_SCT", "OWID_SAM", "OWID_UMC",
@@ -67,3 +67,5 @@ with open('cleaned_data.json', 'w') as output_file:
     json.dump(data_with_removed_fields, output_file, indent=4)
 
 print("Data cleaned and saved to cleaned_data.json.")
+
+#%%

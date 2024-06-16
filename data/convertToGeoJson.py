@@ -76,3 +76,5 @@ with open('data.js', 'w') as output_file:
     output_file.write(updated_js)
 
 print("Updated data.js")
+
+#%%
