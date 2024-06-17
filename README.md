@@ -12,7 +12,8 @@ This project can be viewed live [here](https://covid-visualiser.vercel.app/).
 pnpm install --shamefully-hoist
 ```
 
-> [!NOTE] > _The `--shamefully-hoist` flag **is** required, despite the name, as this flattens the node modules for production._
+> [!NOTE]
+> _The `--shamefully-hoist` flag **is** required, despite the name, as this flattens the node modules for production._
 
 ---
 
@@ -24,7 +25,8 @@ Starting the development server on [localhost](http://localhost:3000) can be don
 pnpm run dev
 ```
 
-> [!NOTE] > _Nuxt will first have to initialise, which can take some time before the project structure is loaded and hot-reloading is available._
+> [!NOTE]
+> _Nuxt will first have to initialise, which can take some time before the project structure is loaded and hot-reloading is available._
 
 Running a production build instead can be done with:
 
@@ -36,7 +38,8 @@ pnpm run preview
 ---
 
 ## 3. Dataset
-
+> [!TODO]
+> This needs to be completed.
 ---
 
 ## 4. Tools
