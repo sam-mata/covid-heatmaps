@@ -37,6 +37,15 @@ pnpm run preview
 
 ## 3. Dataset
 
+This project uses a modified version of
+
+-   total_case
+-   population
+-   people_vaccinated
+-   total_deaths
+
+This was then merged into the properties of each country in the publicly available [geo-countries](https://github.com/datasets/geo-countries) GEOJSON map sourced from [Natural Earth](https://www.naturalearthdata.com/) data.
+
 ---
 
 ## 4. Tools
@@ -54,4 +63,4 @@ pnpm run preview
 
 ## 5. Authorship
 
-All work completed by Zoe Picone, Nathan Bridge-Earney, and Sam Mata in submission for SWEN422.
+All work completed by [Zoe Picone](https://github.com/zoepicone), [Nathan Bridge-Earney](https://github.com/nathanbridgeearney), and [Sam Mata](https://github.com/sam-mata) in submission for SWEN422.
