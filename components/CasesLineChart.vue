@@ -2,7 +2,7 @@
 import * as Plot from "@observablehq/plot";
 import PlotFigure from "../PlotFigure.js";
 import { format } from "d3-format";
-import * as data from "../helpers/CountryDataHelper.js"
+import * as helper from "../helpers/CountryDataHelper.js"
 
 const props = defineProps({
   country_code: String,
@@ -10,15 +10,18 @@ const props = defineProps({
 })
 
 let chartData = null;
+
 if (props.selectedFeature === 'Deaths') {
-  chartData = data.useAllTimeDeaths(props.country_code);
+  chartData = helper.useAllTimeDeaths(props.country_code);
 } else if (props.selectedFeature === 'Cases') {
-  chartData = data.useAllTimeCases(props.country_code);
+  chartData = helper.useAllTimeCases(props.country_code);
 } else if (props.selectedFeature === 'Vaccinations') {
-  chartData = data.useAllTimeVaccinations(props.country_code);
+  chartData = helper.useAllTimeVaccinations(props.country_code);
 }
 
-let date_range = [new Date('2020-01-01'), new Date(data.useLastDate(props.country_code))]
+let date_range = [new Date('2020-01-01'), helper.useLastDate(props.country_code)]
+
+console.log(chartData)
 
 let chart = {
   width: 400,
