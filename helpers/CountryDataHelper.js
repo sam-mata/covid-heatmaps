@@ -1,4 +1,4 @@
-import data from "../data.js"
+import data from "../public/data.json"
 
 export function useCountryData(country_code) {
   let country_data = data.features.find((d) => d.properties.ISO_A3 === country_code).properties.data
