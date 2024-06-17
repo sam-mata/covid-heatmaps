@@ -19,3 +19,15 @@ p {
 ::-webkit-scrollbar {
 	width: 0px;
 }
+
+text {
+	@apply text-sm font-baloo;
+}
+
+button.mapboxgl-popup-close-button {
+	@apply w-5 text-2xl;
+}
+
+.mapboxgl-popup-content {
+	@apply rounded-lg dark:bg-neutral-900;
+}

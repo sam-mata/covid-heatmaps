@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import * as Plot from "@observablehq/plot";
 import PlotFigure from "../PlotFigure.js";
-import {format} from "d3-format";
+import { format } from "d3-format";
 import * as data from "../helpers/CountryDataHelper.js"
 
 const props = defineProps({
@@ -26,19 +26,21 @@ let chart = {
   },
   marks: [
     Plot.line(cases, {
-      // add smoothing
       curve: 'catmull-rom-open',
-      stroke: 'black',
-    })
-  ]
+      stroke: '#ca8a04',
+      strokeWidth: 2,
+    }),
+    Plot.gridY({
+      stroke: 'grey',
+      strokeDasharray: "2,5",
+      strokeOpacity: 0.50,
+    }),
+  ],
 }
 </script>
 
 <template>
+  <h1 class="text-xl font-bold text-center font-open-sans">Cases Over Time</h1>
   <PlotFigure v-if="cases.length > 0" :options="chart" />
   <p v-else>No cases found for country</p>
 </template>
-
-<style scoped>
-
-</style>
