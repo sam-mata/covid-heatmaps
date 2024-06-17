@@ -4,8 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     "@samk-dev/nuxt-vcalendar",
     "@nuxt/fonts",
-    "@nuxtjs/tailwindcss",
-    "nuxt3-leaflet"
+    "@nuxtjs/tailwindcss"
   ],
   devtools: { enabled: true },
 

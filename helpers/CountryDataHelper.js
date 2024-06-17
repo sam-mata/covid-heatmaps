@@ -1,11 +1,19 @@
-import data from "../data/cleaned_data.json"
+import data from "../public/data.json"
 
 export function useCountryData(country_code) {
-    return data[country_code].data
+  let country_data = data.features.find((d) => d.properties.ISO_A3 === country_code).properties.data
+  if (country_data === undefined) {
+    return []
+  }
+  return country_data
 }
 
 export function usePopForCountry(country_code) {
-  return data[country_code].population
+  let pop = data.features.find((d) => d.properties.ISO_A3 === country_code).properties.population
+  if (pop === undefined) {
+    return null
+  }
+  return pop
 }
 
 export function useAllTimeCases(country_code) {
@@ -17,6 +25,9 @@ export function useAllTimeCases(country_code) {
 
 export function useLastDate(country_code) {
   let time_cases = useAllTimeCases(country_code)
+  if (time_cases.length === 0) {
+    return []
+  }
   return time_cases[time_cases.length - 1][0]
 }
 
@@ -30,6 +41,10 @@ export function useCasesRange(country_code, start_date, end_date) {
     }
 
   let time_cases = useAllTimeCases(country_code)
+  if (time_cases.length === 0) {
+    return null
+  }
+
   let firstCase = time_cases.findIndex((d) => d[0] === start_date)
   let lastCase = time_cases.findIndex((d) => d[0] === end_date)
 
