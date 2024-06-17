@@ -2,7 +2,7 @@
 
 An interactive web app for visualising worldwide trends in Covid-19 data.
 
-This project can be viewed live [here](https://covid-visualiser.vercel.app/).
+This project can be viewed live [online](https://covid-visualiser.vercel.app/).
 
 ---
 
@@ -12,7 +12,8 @@ This project can be viewed live [here](https://covid-visualiser.vercel.app/).
 pnpm install --shamefully-hoist
 ```
 
-> [!NOTE] > _The `--shamefully-hoist` flag **is** required, despite the name, as this flattens the node modules for production._
+> [!NOTE]
+> _The `--shamefully-hoist` flag **is** required._
 
 ---
 
@@ -24,7 +25,8 @@ Starting the development server on [localhost](http://localhost:3000) can be don
 pnpm run dev
 ```
 
-> [!NOTE] > _Nuxt will first have to initialise, which can take some time before the project structure is loaded and hot-reloading is available._
+> [!NOTE]
+> _Nuxt will first have to initialise, which can take some time (~20 seconds) before the project structure is loaded and hot-reloading is available._
 
 Running a production build instead can be done with:
 
@@ -37,14 +39,13 @@ pnpm run preview
 
 ## 3. Dataset
 
-This project uses a modified version of
+This project uses a subset of the publicly available ["Data on COVID-19"](https://github.com/owid/covid-19-data/tree/master/public/data) dataset made by [Our World in Data](https://ourworldindata.org/coronavirus). Specifically, three measures are derived:
 
--   total_case
--   population
--   people_vaccinated
--   total_deaths
+1.  `total_cases` - The total number of cases for a given country.
+2.  `people_vaccinated` - The total number of people who recieved at least one dose in a given country.
+3.  `total_deaths` - The total count of deaths attributed to Covid-19 in a given country.
 
-This was then merged into the properties of each country in the publicly available [geo-countries](https://github.com/datasets/geo-countries) GEOJSON map sourced from [Natural Earth](https://www.naturalearthdata.com/) data.
+This was then merged into the properties of each country in the publicly available [`geo-countries`](https://github.com/datasets/geo-countries) GEOJSON map sourced from [Natural Earth](https://www.naturalearthdata.com/) data.
 
 ---
 
