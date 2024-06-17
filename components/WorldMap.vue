@@ -4,7 +4,6 @@
 
 <script>
 import mapboxgl from 'mapbox-gl';
-import data from "../public/data.json"
 import { h, nextTick, render } from 'vue';
 import CasesLineChart from "~/components/CasesLineChart.vue";
 import '../node_modules/mapbox-gl/dist/mapbox-gl.css';
