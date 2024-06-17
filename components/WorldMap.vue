@@ -59,7 +59,7 @@ export default {
 
       nextTick(() => {
         const lineChartPopupContent = document.getElementById('line-chart-popup-content');
-        render(h(CasesLineChart, { country_code }), lineChartPopupContent);
+        render(h(CasesLineChart, { country_code, selectedFeature: this.selectedFeature }), lineChartPopupContent);
       });
     });
   },
@@ -119,7 +119,6 @@ export default {
       const property = propertyMap[this.selectedFeature];
       const colorScale = colorScales[this.selectedFeature];
 
-      // Calculate min, max, and average values for the selected feature
       let min = Infinity;
       let max = -Infinity;
       let sum = 0;
