@@ -54,7 +54,7 @@ export default {
       new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML('<div id="line-chart-popup-content"></div>')
-        .setMaxWidth("none")
+        .setMaxWidth("320px")
         .addTo(this.map);
 
       nextTick(() => {

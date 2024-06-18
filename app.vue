@@ -4,7 +4,7 @@ import "./app.css";
 const features = [{ label: 'Deaths', }, { label: 'Cases', }, { label: 'Vaccinations', }]
 const isOpen = ref(true)
 const mapStyle = ref('');
-const selectedFeatureIndex = ref(1) // Add this line to define selectedFeatureIndex
+const selectedFeatureIndex = ref(1)
 
 const toggleMapStyle = () => {
   const currentStyle = mapStyle.value;
