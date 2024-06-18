@@ -55,6 +55,14 @@ This project uses a subset of the publicly available ["Data on COVID-19"](https:
 
 This was then merged into the properties of each country in the publicly available [`geo-countries`](https://github.com/datasets/geo-countries) GEOJSON map sourced from [Natural Earth](https://www.naturalearthdata.com/) data.
 
+This project uses a subset of the publicly available ["Data on COVID-19"](https://github.com/owid/covid-19-data/tree/master/public/data) dataset made by [Our World in Data](https://ourworldindata.org/coronavirus). Specifically, three measures are derived:
+
+1.  `total_cases` - The total number of cases for a given country.
+2.  `people_vaccinated` - The total number of people who recieved at least one dose in a given country.
+3.  `total_deaths` - The total count of deaths attributed to Covid-19 in a given country.
+
+This was then merged into the properties of each country in the publicly available [`geo-countries`](https://github.com/datasets/geo-countries) GEOJSON map sourced from [Natural Earth](https://www.naturalearthdata.com/) data.
+
 ---
 
 ## 5. Tools
