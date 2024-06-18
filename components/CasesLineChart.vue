@@ -3,7 +3,7 @@ based on the data availability, you can modify the component as follows:
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from 'vue'
 import * as Plot from "@observablehq/plot"
-import PlotFigure from "../PlotFigure.js"
+import PlotFigure from "../helpers/PlotFigure.js"
 import { format } from "d3-format"
 import * as helper from "../helpers/CountryDataHelper.js"
 

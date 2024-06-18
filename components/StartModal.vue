@@ -8,9 +8,9 @@
         </p>
         <p>
             Created by
-            <a href="https://github.com/zoepicone">Zoe Picone</a>, <a
-                href="https://github.com/nathanbridgeearney">Nathan
-                Bridge-Earney</a> , and <a href="https://github.com/sam-mata">Sam Mata</a>.
+            <a href="https://github.com/nathanbridgeearney">Nathan
+                Bridge-Earney</a> , <a href="https://github.com/zoepicone">Zoe Picone</a>, and <a
+                href="https://github.com/sam-mata">Sam Mata</a>.
         </p>
         <p>
             Project code available <a href="https://github.com/sam-mata/covid-visualiser">here</a>.
