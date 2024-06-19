@@ -1,5 +1,3 @@
-To display a loading message while fetching the data and then show either the graph or the "No data available" message
-based on the data availability, you can modify the component as follows:
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from 'vue'
 import * as Plot from "@observablehq/plot"
