@@ -49,8 +49,8 @@ importers:
         specifier: ^2.16.0
         version: 2.17.0(magicast@0.3.4)(rollup@4.18.1)(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8)(terser@5.31.2))(vue@3.4.31(typescript@3.9.10))
       '@samk-dev/nuxt-vcalendar':
-        specifier: ^1.0.3
-        version: 1.0.3(magicast@0.3.4)(rollup@4.18.1)(vue@3.4.31(typescript@3.9.10))
+        specifier: ^1.0.4
+        version: 1.0.4(magicast@0.3.4)(rollup@4.18.1)(vue@3.4.31(typescript@3.9.10))
       '@types/d3-format':
         specifier: ^3.0.4
         version: 3.0.4
@@ -1217,8 +1217,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@samk-dev/nuxt-vcalendar@1.0.3':
-    resolution: {integrity: sha512-xpT3lD+lVFfZ5HlXZ0EhxLjsS/OvIAhc3mRLHRu0bZF6e+E6Oer4FIIwWfptUqsWkvJCxucxfzYxJqfOPuOkXw==}
+  '@samk-dev/nuxt-vcalendar@1.0.4':
+    resolution: {integrity: sha512-vl2VzELpqSheJmuG1ZehggieEb2E8YRkw+DDVl2UrLBj6z1ll3CHL0Kjrjg5Bg1UylmQO3yBdpTyjESP/tSj/Q==}
 
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
@@ -6398,9 +6398,9 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.1':
     optional: true
 
-  '@samk-dev/nuxt-vcalendar@1.0.3(magicast@0.3.4)(rollup@4.18.1)(vue@3.4.31(typescript@3.9.10))':
+  '@samk-dev/nuxt-vcalendar@1.0.4(magicast@0.3.4)(rollup@4.18.1)(vue@3.4.31(typescript@3.9.10))':
     dependencies:
-      '@nuxt/kit': 3.12.2(magicast@0.3.4)(rollup@4.18.1)
+      '@nuxt/kit': 3.12.3(magicast@0.3.4)(rollup@4.18.1)
       '@popperjs/core': 2.11.8
       v-calendar: 3.1.2(@popperjs/core@2.11.8)(vue@3.4.31(typescript@3.9.10))
     transitivePeerDependencies:
