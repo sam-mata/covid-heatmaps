@@ -8,3 +8,5 @@ updates:
       npm-dependencies:
         patterns:
           - "*"
+    reviewers:
+      - "sam-mata"
