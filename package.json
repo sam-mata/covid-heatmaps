@@ -15,7 +15,7 @@
 		"@samk-dev/nuxt-vcalendar": "^1.0.4",
 		"@types/d3-format": "^3.0.4",
 		"@types/topojson-client": "^3.1.4",
-		"nuxt": "^3.12.4",
+		"nuxt": "^3.13.0",
 		"sass": "^1.77.8",
 		"vue": "^3.4.38",
 		"vue-router": "^4.4.3"
