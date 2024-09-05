@@ -17,7 +17,7 @@
 		"@types/topojson-client": "^3.1.4",
 		"nuxt": "^3.13.1",
 		"sass": "^1.78.0",
-		"vue": "^3.5.1",
+		"vue": "^3.5.2",
 		"vue-router": "^4.4.3"
 	},
 	"dependencies": {
