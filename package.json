@@ -11,12 +11,12 @@
 	"devDependencies": {
 		"@nuxt/devtools": "^1.4.2",
 		"@nuxt/fonts": "^0.8.0",
-		"@nuxt/ui": "^2.18.4",
+		"@nuxt/ui": "^2.18.5",
 		"@samk-dev/nuxt-vcalendar": "^1.0.4",
 		"@types/d3-format": "^3.0.4",
 		"@types/topojson-client": "^3.1.5",
 		"nuxt": "^3.13.2",
-		"sass": "^1.78.0",
+		"sass": "^1.79.1",
 		"vue": "^3.5.6",
 		"vue-router": "^4.4.5"
 	},
@@ -25,7 +25,7 @@
 		"@observablehq/plot": "^0.6.16",
 		"@vueform/slider": "^2.1.10",
 		"d3-format": "^3.1.0",
-		"date-fns": "^4.0.0",
+		"date-fns": "^4.1.0",
 		"mapbox-gl": "^3.6.0",
 		"rollup-plugin-json": "^4.0.0",
 		"topojson-client": "^3.1.0",
