@@ -16,7 +16,7 @@
 		"@types/d3-format": "^3.0.4",
 		"@types/topojson-client": "^3.1.5",
 		"nuxt": "^3.14.159",
-		"sass": "^1.80.6",
+		"sass": "^1.80.7",
 		"vue": "^3.5.12",
 		"vue-router": "^4.4.5"
 	},
