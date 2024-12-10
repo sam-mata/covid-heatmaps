@@ -9,16 +9,16 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@nuxt/devtools": "^1.6.0",
-		"@nuxt/fonts": "^0.10.2",
-		"@nuxt/ui": "^2.19.2",
+		"@nuxt/devtools": "^1.6.3",
+		"@nuxt/fonts": "^0.10.3",
+		"@nuxt/ui": "^2.20.0",
 		"@samk-dev/nuxt-vcalendar": "^1.0.4",
 		"@types/d3-format": "^3.0.4",
 		"@types/topojson-client": "^3.1.5",
-		"nuxt": "^3.14.159",
-		"sass": "^1.81.0",
+		"nuxt": "^3.14.1592",
+		"sass": "^1.82.0",
 		"vue": "^3.5.13",
-		"vue-router": "^4.4.5"
+		"vue-router": "^4.5.0"
 	},
 	"dependencies": {
 		"@nuxt/typescript": "^2.8.1",
