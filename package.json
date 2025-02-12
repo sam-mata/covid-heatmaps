@@ -9,14 +9,14 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@nuxt/devtools": "^1.7.0",
+		"@nuxt/devtools": "^2.0.0",
 		"@nuxt/fonts": "^0.10.3",
 		"@nuxt/ui": "^2.21.0",
 		"@samk-dev/nuxt-vcalendar": "^1.0.4",
 		"@types/d3-format": "^3.0.4",
 		"@types/topojson-client": "^3.1.5",
 		"nuxt": "^3.15.4",
-		"sass": "^1.83.4",
+		"sass": "^1.84.0",
 		"vue": "^3.5.13",
 		"vue-router": "^4.5.0"
 	},
