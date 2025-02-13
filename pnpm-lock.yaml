@@ -24,8 +24,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       mapbox-gl:
-        specifier: ^3.9.4
-        version: 3.9.4
+        specifier: ^3.10.0
+        version: 3.10.0
       rollup-plugin-json:
         specifier: ^4.0.0
         version: 4.0.0
@@ -37,7 +37,7 @@ importers:
         version: 3.1.2(@popperjs/core@2.11.8)(vue@3.5.13(typescript@3.9.10))
       vue-mapbox:
         specifier: ^0.4.1
-        version: 0.4.1(mapbox-gl@3.9.4)(vue@3.5.13(typescript@3.9.10))
+        version: 0.4.1(mapbox-gl@3.10.0)(vue@3.5.13(typescript@3.9.10))
     devDependencies:
       '@nuxt/devtools':
         specifier: ^2.0.0
@@ -3288,8 +3288,8 @@ packages:
     resolution: {integrity: sha512-4y7uGv8bd2WdM9vpQsiQNo41Ln1NvhvDRuVt0k2JZQ+ezN2uaQes7lZeZ+QQUHOLQAtDaBJ+7wCbi+ab/KFs+w==}
     engines: {node: '>=0.10.0'}
 
-  mapbox-gl@3.9.4:
-    resolution: {integrity: sha512-IxfpdyNzjCMzkqj/q5OUamlF1QcS+IFEARteygEgao2B8l8+UF2ahpNRgHT2EpMSE8ma1bq4LKvr+EuJ6gqniw==}
+  mapbox-gl@3.10.0:
+    resolution: {integrity: sha512-YnQxjlthuv/tidcxGYU2C8nRDVXMlAHa3qFhuOJeX4AfRP72OMRBf9ApL+M+k5VWcAXi2fcNOUVgphknjLumjA==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -8932,7 +8932,7 @@ snapshots:
     dependencies:
       object-visit: 1.0.1
 
-  mapbox-gl@3.9.4:
+  mapbox-gl@3.10.0:
     dependencies:
       '@mapbox/jsonlint-lines-primitives': 2.0.2
       '@mapbox/mapbox-gl-supported': 3.0.0
@@ -10833,10 +10833,10 @@ snapshots:
 
   vue-devtools-stub@0.1.0: {}
 
-  vue-mapbox@0.4.1(mapbox-gl@3.9.4)(vue@3.5.13(typescript@3.9.10)):
+  vue-mapbox@0.4.1(mapbox-gl@3.10.0)(vue@3.5.13(typescript@3.9.10)):
     dependencies:
       map-promisified: 0.4.0
-      mapbox-gl: 3.9.4
+      mapbox-gl: 3.10.0
       vue: 3.5.13(typescript@3.9.10)
 
   vue-router@4.5.0(vue@3.5.13(typescript@3.9.10)):
