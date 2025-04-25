@@ -9,16 +9,16 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@nuxt/devtools": "^2.1.0",
-		"@nuxt/fonts": "^0.10.3",
-		"@nuxt/ui": "^2.21.0",
+		"@nuxt/devtools": "^2.4.0",
+		"@nuxt/fonts": "^0.11.2",
+		"@nuxt/ui": "^3.1.0",
 		"@samk-dev/nuxt-vcalendar": "^1.0.4",
 		"@types/d3-format": "^3.0.4",
 		"@types/topojson-client": "^3.1.5",
-		"nuxt": "^3.15.4",
-		"sass": "^1.85.0",
+		"nuxt": "^3.16.2",
+		"sass": "^1.87.0",
 		"vue": "^3.5.13",
-		"vue-router": "^4.5.0"
+		"vue-router": "^4.5.1"
 	},
 	"dependencies": {
 		"@nuxt/typescript": "^2.8.1",
@@ -26,7 +26,7 @@
 		"@vueform/slider": "^2.1.10",
 		"d3-format": "^3.1.0",
 		"date-fns": "^4.1.0",
-		"mapbox-gl": "^3.10.0",
+		"mapbox-gl": "^3.11.1",
 		"rollup-plugin-json": "^4.0.0",
 		"topojson-client": "^3.1.0",
 		"v-calendar": "^3.1.2",
