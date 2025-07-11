@@ -1,5 +1,8 @@
 # Covid Visualiser
 
+> [!WARNING]  
+> This project is now archived and no longer available.
+
 An interactive web app for visualising worldwide trends in Covid-19 data.
 
 This project can be viewed live [online](https://covid-visualiser.vercel.app/).
